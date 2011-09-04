@@ -1,0 +1,6 @@
+*.pyc
+*.swp
+*.swp
+DS_Store
+page_cache
+scrape.sqlite
