@@ -33,9 +33,11 @@ while report_id > 0:
     next_id = '%i%07i' % (year, report_id)
 
     if os.path.exists('page_cache/%s.html' % next_id):
+        report_id -= 1
         continue
 
     if os.path.exists('page_cache/%s.skip' % next_id):
+        report_id -= 1
         continue
 
     print 'Fetching report %s' % next_id
