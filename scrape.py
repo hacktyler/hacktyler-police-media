@@ -2,6 +2,7 @@
 
 import os.path
 import re
+import sys
 import time
 
 import requests
@@ -29,7 +30,7 @@ newest_id = recent_urls.group(1)
 year = int(newest_id[:2])
 report_id = int(newest_id[2:])
 
-while report_id > 0:
+while report_id >= 0:
     next_id = '%i%07i' % (year, report_id)
 
     if os.path.exists('page_cache/%s.html' % next_id):
